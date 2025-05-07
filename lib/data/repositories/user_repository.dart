@@ -1,4 +1,4 @@
-
+// lib/data/repositories/user_repository.dart
 import '../../core/constants/app_constants.dart';
 import '../models/user_model.dart';
 import '../services/api_service.dart';
@@ -46,6 +46,25 @@ class UserRepository {
     }
   }
 
+  Future<UserModel> register(String name, String email, String password) async {
+    try {
+      final response = await _apiService.post('/auth/register', {
+        'name': name,
+        'email': email,
+        'password': password,
+      });
+
+      final token = response['token'];
+      final user = UserModel.fromJson(response['user']);
+
+      await _storageService.saveString(AppConstants.userTokenKey, token);
+      
+      return user;
+    } catch (e) {
+      throw Exception('Registration failed: ${e.toString()}');
+    }
+  }
+
   Future<void> logout() async {
     try {
       await _apiService.post('/auth/logout', {});
@@ -54,7 +73,7 @@ class UserRepository {
       throw Exception('Logout failed: ${e.toString()}');
     }
   }
-
+  
   Future<UserModel> updateProfile(UserModel user) async {
     try {
       final response = await _apiService.put('/user/profile', user.toJson());

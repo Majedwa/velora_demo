@@ -8,10 +8,12 @@ import '../../../../data/models/path_model.dart';
 
 class PathCard extends StatelessWidget {
   final PathModel path;
+  final VoidCallback? onTap;  // Añadido el parámetro onTap
 
   const PathCard({
     super.key,
     required this.path,
+    this.onTap,  // Parámetro opcional
   });
 
   @override
@@ -19,7 +21,7 @@ class PathCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 16),
       child: InkWell(
-        onTap: () => context.go('/path/${path.id}'),
+        onTap: onTap ?? () => context.go('/paths/${path.id}'),  // Usar onTap personalizado o el valor por defecto
         borderRadius: BorderRadius.circular(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
