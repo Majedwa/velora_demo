@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 // lib/core/router/app_router.dart - تحديث لإضافة مسار الرحلة
+=======
+// lib/core/router/app_router.dart
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../presentation/providers/user_provider.dart';
+<<<<<<< HEAD
 import '../../presentation/providers/paths_provider.dart';
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
 import '../../presentation/screens/auth/login_screen.dart';
 import '../../presentation/screens/auth/onboarding_screen.dart';
 import '../../presentation/screens/auth/register_screen.dart';
@@ -19,7 +26,10 @@ import '../../presentation/screens/search/search_screen.dart';
 import '../../presentation/screens/settings/settings_screen.dart';
 import '../../presentation/screens/saved_paths/saved_paths_screen.dart';
 import '../../presentation/screens/achievements/achievements_screen.dart';
+<<<<<<< HEAD
 import '../../presentation/screens/journey/journey_tracking_screen.dart';
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
 import '../../presentation/widgets/navigation/scaffold_with_navbar.dart';
 
 class AppRouter {
@@ -49,6 +59,7 @@ class AppRouter {
         builder: (context, state) => const RegisterScreen(),
       ),
       
+<<<<<<< HEAD
       // Journey tracking route (خارج الشل للشاشة الكاملة)
       GoRoute(
         path: '/journey/:pathId',
@@ -74,6 +85,8 @@ class AppRouter {
         },
       ),
       
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
       // Main app routes with bottom navigation bar shell
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
@@ -89,7 +102,11 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: 'search',
+<<<<<<< HEAD
                 parentNavigatorKey: _rootNavigatorKey,
+=======
+                parentNavigatorKey: _rootNavigatorKey, // هذا يضمن استخدام مستوى التنقل الجذر
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
                 builder: (context, state) => const SearchScreen(),
               ),
             ],
@@ -102,7 +119,11 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: ':id',
+<<<<<<< HEAD
                 parentNavigatorKey: _rootNavigatorKey,
+=======
+                parentNavigatorKey: _rootNavigatorKey, // للصعود مستوى واحد فوق الشل
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
                 builder: (context, state) => PathDetailsScreen(
                   pathId: state.pathParameters['id']!,
                 ),
