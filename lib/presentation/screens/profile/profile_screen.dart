@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 // lib/presentation/screens/profile/profile_screen.dart - مُصحح
+=======
+<<<<<<< HEAD
+// lib/presentation/screens/profile/profile_screen.dart - مُصحح
+=======
+// lib/presentation/screens/profile/profile_screen.dart
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 import 'package:flutter/material.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:provider/provider.dart';
@@ -9,7 +17,14 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/utils/responsive_utils.dart';
 import '../../../core/localization/language_provider.dart';
+<<<<<<< HEAD
 import '../../../core/localization/app_localizations.dart';
+=======
+<<<<<<< HEAD
+import '../../../core/localization/app_localizations.dart';
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 import '../../providers/user_provider.dart';
 import '../../providers/saved_paths_provider.dart';
 import '../../widgets/common/loading_indicator.dart';
@@ -46,6 +61,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   void _showLogoutConfirmation() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
     final localizations = AppLocalizations.of(context)!;
     final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
     
@@ -58,13 +77,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ? 'هل أنت متأكد من تسجيل الخروج؟'
             : 'Are you sure you want to logout?'
         ),
+<<<<<<< HEAD
+=======
+=======
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('تسجيل الخروج'),
+        content: const Text('هل أنت متأكد من تسجيل الخروج؟'),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
+<<<<<<< HEAD
             child: Text(localizations.get('cancel')),
+=======
+<<<<<<< HEAD
+            child: Text(localizations.get('cancel')),
+=======
+            child: const Text('إلغاء'),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
           ),
           TextButton(
             onPressed: () {
@@ -74,7 +111,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
             style: TextButton.styleFrom(
               foregroundColor: AppColors.error,
             ),
+<<<<<<< HEAD
             child: Text(localizations.get('logout')),
+=======
+<<<<<<< HEAD
+            child: Text(localizations.get('logout')),
+=======
+            child: const Text('تسجيل الخروج'),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
           ),
         ],
       ),
@@ -99,6 +144,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
       final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -107,6 +156,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ? 'لا يمكن فتح الرابط'
               : 'Cannot open link'
           ),
+<<<<<<< HEAD
+=======
+=======
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('لا يمكن فتح الرابط'),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
           backgroundColor: AppColors.error,
         ),
       );
@@ -114,9 +171,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   void _showAboutDialog() {
+<<<<<<< HEAD
     final localizations = AppLocalizations.of(context)!;
     final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
     
+=======
+<<<<<<< HEAD
+    final localizations = AppLocalizations.of(context)!;
+    final languageProvider = Provider.of<LanguageProvider>(context, listen: false);
+    
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
     showAboutDialog(
       context: context,
       applicationName: 'Velora',
@@ -130,17 +196,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
       children: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
         Text(
           languageProvider.isArabic 
             ? 'تطبيق لاستكشاف المسارات السياحية في فلسطين'
             : 'An app for exploring tourist routes in Palestine'
         ),
+<<<<<<< HEAD
+=======
+=======
+        const Text('تطبيق لاستكشاف المسارات السياحية في فلسطين'),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
         const SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TextButton(
               onPressed: () => _openUrl(AppConstants.termsUrl),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
               child: Text(
                 languageProvider.isArabic 
                   ? 'شروط الاستخدام'
@@ -154,6 +234,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ? 'سياسة الخصوصية'
                   : 'Privacy Policy'
               ),
+<<<<<<< HEAD
+=======
+=======
+              child: const Text('شروط الاستخدام'),
+            ),
+            TextButton(
+              onPressed: () => _openUrl(AppConstants.privacyUrl),
+              child: const Text('سياسة الخصوصية'),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
             ),
           ],
         ),
@@ -185,6 +275,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               const SizedBox(height: 16),
               Text(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                 provider.isArabic ? 'اختر اللغة' : 'Choose Language',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
@@ -214,10 +308,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 subtitle: const Text('Arabic'),
                 trailing: provider.isArabic
                     ? const Icon(PhosphorIcons.check_circle_fill, color: AppColors.primary)
+<<<<<<< HEAD
+=======
+=======
+                'اختر اللغة',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: 16),
+              ListTile(
+                leading: const CircleAvatar(
+                  child: Text('ع'),
+                ),
+                title: const Text('العربية'),
+                trailing: provider.isArabic
+                    ? const Icon(PhosphorIcons.check, color: AppColors.primary)
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     : null,
                 onTap: () {
                   provider.changeLanguage('ar');
                   Navigator.pop(context);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                   _showLanguageChangeSnackBar('ar');
                 },
               ),
@@ -246,21 +360,50 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 subtitle: const Text('الإنجليزية'),
                 trailing: provider.isEnglish
                     ? const Icon(PhosphorIcons.check_circle_fill, color: AppColors.primary)
+<<<<<<< HEAD
+=======
+=======
+                },
+              ),
+              ListTile(
+                leading: const CircleAvatar(
+                  child: Text('En'),
+                ),
+                title: const Text('English'),
+                trailing: !provider.isArabic
+                    ? const Icon(PhosphorIcons.check, color: AppColors.primary)
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     : null,
                 onTap: () {
                   provider.changeLanguage('en');
                   Navigator.pop(context);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                   _showLanguageChangeSnackBar('en');
                 },
               ),
               
               const SizedBox(height: 16),
+<<<<<<< HEAD
+=======
+=======
+                },
+              ),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
             ],
           ),
         ),
       ),
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
   
   void _showLanguageChangeSnackBar(String newLanguage) {
     final message = newLanguage == 'ar' 
@@ -285,6 +428,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
   @override
   Widget build(BuildContext context) {
@@ -293,17 +441,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final userProvider = Provider.of<UserProvider>(context);
     final savedPathsProvider = Provider.of<SavedPathsProvider>(context);
     final languageProvider = Provider.of<LanguageProvider>(context);
+<<<<<<< HEAD
     final localizations = AppLocalizations.of(context)!;
+=======
+<<<<<<< HEAD
+    final localizations = AppLocalizations.of(context)!;
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
     
     final user = userProvider.user;
     final savedPathsCount = savedPathsProvider.savedPaths.length;
     
     if (_isLoading || user == null) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
       return Scaffold(
         body: LoadingIndicator(
           message: languageProvider.isArabic 
             ? 'جاري تحميل البيانات...'
             : 'Loading data...',
+<<<<<<< HEAD
+=======
+=======
+      return const Scaffold(
+        body: LoadingIndicator(
+          message: 'جاري تحميل البيانات...',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
         ),
       );
     }
@@ -319,6 +486,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             backgroundColor: Colors.transparent,
             elevation: 0,
             actions: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
               // زر تغيير اللغة المحسن
               Container(
                 margin: const EdgeInsets.all(8),
@@ -355,6 +526,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               
               // زر الإعدادات
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
               IconButton(
                 icon: Container(
                   padding: const EdgeInsets.all(8),
@@ -502,7 +678,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Expanded(
                     child: _StatItem(
                       value: user.completedTrips.toString(),
+<<<<<<< HEAD
                       label: localizations.get('completed_trips'),
+=======
+<<<<<<< HEAD
+                      label: localizations.get('completed_trips'),
+=======
+                      label: 'رحلات مكتملة',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                       icon: PhosphorIcons.check_circle,
                       color: AppColors.success,
                     ),
@@ -510,7 +694,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Expanded(
                     child: _StatItem(
                       value: savedPathsCount.toString(),
+<<<<<<< HEAD
                       label: localizations.get('saved_trips'),
+=======
+<<<<<<< HEAD
+                      label: localizations.get('saved_trips'),
+=======
+                      label: 'رحلات محفوظة',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                       icon: PhosphorIcons.bookmark_simple,
                       color: AppColors.primary,
                     ),
@@ -518,7 +710,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Expanded(
                     child: _StatItem(
                       value: user.achievements.toString(),
+<<<<<<< HEAD
                       label: localizations.get('achievements'),
+=======
+<<<<<<< HEAD
+                      label: localizations.get('achievements'),
+=======
+                      label: 'إنجازات',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                       icon: PhosphorIcons.trophy,
                       color: Colors.amber,
                     ),
@@ -547,10 +747,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   _MenuItem(
                     icon: PhosphorIcons.user,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     title: languageProvider.isArabic ? 'حسابي' : 'My Account',
                     subtitle: languageProvider.isArabic 
                       ? 'تعديل المعلومات الشخصية'
                       : 'Edit personal information',
+<<<<<<< HEAD
+=======
+=======
+                    title: 'حسابي',
+                    subtitle: 'تعديل المعلومات الشخصية',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     onTap: () {
                       showModalBottomSheet(
                         context: context,
@@ -565,10 +776,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _buildDivider(),
                   _MenuItem(
                     icon: PhosphorIcons.bookmark_simple,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     title: localizations.get('saved'),
                     subtitle: languageProvider.isArabic 
                       ? 'عرض وإدارة المسارات المحفوظة'
                       : 'View and manage saved paths',
+<<<<<<< HEAD
+=======
+=======
+                    title: 'المسارات المحفوظة',
+                    subtitle: 'عرض وإدارة المسارات المحفوظة',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     onTap: () {
                       context.go('/profile/saved');
                     },
@@ -576,10 +798,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _buildDivider(),
                   _MenuItem(
                     icon: PhosphorIcons.check_circle,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     title: localizations.get('my_trips'),
                     subtitle: languageProvider.isArabic 
                       ? 'المسارات التي أكملتها'
                       : 'Paths you have completed',
+<<<<<<< HEAD
+=======
+=======
+                    title: 'رحلاتي',
+                    subtitle: 'المسارات التي أكملتها',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     onTap: () {
                       showModalBottomSheet(
                         context: context,
@@ -594,10 +827,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _buildDivider(),
                   _MenuItem(
                     icon: PhosphorIcons.trophy,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     title: localizations.get('achievements'),
                     subtitle: languageProvider.isArabic 
                       ? 'الإنجازات التي حققتها'
                       : 'Achievements you have earned',
+<<<<<<< HEAD
+=======
+=======
+                    title: 'إنجازاتي',
+                    subtitle: 'الإنجازات التي حققتها',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     onTap: () {
                       context.go('/profile/achievements');
                     },
@@ -607,7 +851,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
           
+<<<<<<< HEAD
           // الإعدادات واللغة
+=======
+<<<<<<< HEAD
+          // الإعدادات واللغة
+=======
+          // الإعدادات
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
           SliverToBoxAdapter(
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -626,10 +878,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   _MenuItem(
                     icon: PhosphorIcons.gear,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     title: localizations.get('settings'),
                     subtitle: languageProvider.isArabic 
                       ? 'تخصيص التطبيق'
                       : 'Customize the app',
+<<<<<<< HEAD
+=======
+=======
+                    title: 'الإعدادات',
+                    subtitle: 'تخصيص التطبيق',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     onTap: () {
                       context.go('/profile/settings');
                     },
@@ -637,6 +900,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _buildDivider(),
                   _MenuItem(
                     icon: PhosphorIcons.translate,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     title: localizations.get('language'),
                     subtitle: languageProvider.isArabic 
                       ? 'تغيير لغة التطبيق'
@@ -660,6 +927,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         ),
                         const SizedBox(width: 8),
+<<<<<<< HEAD
+=======
+=======
+                    title: 'اللغة',
+                    subtitle: 'تغيير لغة التطبيق',
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          languageProvider.isArabic ? 'العربية' : 'English',
+                          style: TextStyle(
+                            color: AppColors.textSecondary,
+                            fontSize: 14,
+                          ),
+                        ),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                         Icon(
                           PhosphorIcons.caret_right,
                           color: AppColors.textSecondary,
@@ -672,16 +956,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _buildDivider(),
                   _MenuItem(
                     icon: PhosphorIcons.question,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     title: localizations.get('help_support'),
                     subtitle: languageProvider.isArabic 
                       ? 'الأسئلة الشائعة والدعم الفني'
                       : 'FAQ and technical support',
+<<<<<<< HEAD
+=======
+=======
+                    title: 'المساعدة والدعم',
+                    subtitle: 'الأسئلة الشائعة والدعم الفني',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     onTap: () {
                       _openUrl(AppConstants.faqUrl);
                     },
                   ),
                   _buildDivider(),
                   _MenuItem(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     icon: PhosphorIcons.info,
                     title: localizations.get('about_app'),
                     subtitle: languageProvider.isArabic 
@@ -696,6 +995,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     onTap: _showAboutDialog,
                   ),
+<<<<<<< HEAD
+=======
+=======
+  icon: PhosphorIcons.info,
+  title: 'عن التطبيق',
+  subtitle: 'معلومات عن Velora',
+  trailing: Text(
+    'النسخة 1.0.0',
+    style: TextStyle(
+      color: AppColors.textSecondary,
+      fontSize: 14,
+    ),
+  ),
+  onTap: _showAboutDialog,
+),
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                 ],
               ),
             ),
@@ -718,10 +1034,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               child: _MenuItem(
                 icon: PhosphorIcons.sign_out,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                 title: localizations.get('logout'),
                 subtitle: languageProvider.isArabic 
                   ? 'الخروج من حسابك'
                   : 'Sign out of your account',
+<<<<<<< HEAD
+=======
+=======
+                title: 'تسجيل الخروج',
+                subtitle: 'الخروج من حسابك',
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                 iconColor: AppColors.error,
                 titleColor: AppColors.error,
                 onTap: _showLogoutConfirmation,

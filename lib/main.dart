@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 // lib/main.dart - تحديث لإضافة JourneyProvider
+=======
+<<<<<<< HEAD
+// lib/main.dart - تحديث لإضافة JourneyProvider
+=======
+// lib/main.dart - simplified error handling
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +20,14 @@ import 'presentation/providers/paths_provider.dart';
 import 'presentation/providers/user_provider.dart';
 import 'presentation/providers/settings_provider.dart';
 import 'presentation/providers/saved_paths_provider.dart';
+<<<<<<< HEAD
 import 'presentation/providers/journey_provider.dart'; // إضافة جديدة
+=======
+<<<<<<< HEAD
+import 'presentation/providers/journey_provider.dart'; // إضافة جديدة
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -78,7 +93,14 @@ void main() async {
         ChangeNotifierProvider(create: (_) => PathsProvider()),
         ChangeNotifierProvider(create: (_) => SettingsProvider()),
         ChangeNotifierProvider(create: (_) => SavedPathsProvider()),
+<<<<<<< HEAD
         ChangeNotifierProvider(create: (_) => JourneyProvider()), // إضافة جديدة
+=======
+<<<<<<< HEAD
+        ChangeNotifierProvider(create: (_) => JourneyProvider()), // إضافة جديدة
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
       ],
       child: const VeloraApp(),
     ),

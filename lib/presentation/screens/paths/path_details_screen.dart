@@ -6,7 +6,14 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
+<<<<<<< HEAD
 import 'package:go_router/go_router.dart';
+=======
+<<<<<<< HEAD
+import 'package:go_router/go_router.dart';
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
 import '../../../core/constants/app_colors.dart';
 import '../../../core/utils/responsive_utils.dart';
@@ -106,6 +113,10 @@ class _PathDetailsScreenState extends State<PathDetailsScreen> {
       ),
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
   // دالة بدء الرحلة المحدثة
   void _startJourney() {
@@ -244,6 +255,11 @@ class _PathDetailsScreenState extends State<PathDetailsScreen> {
       ),
     );
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
   @override
   void dispose() {
@@ -312,12 +328,21 @@ class _PathDetailsScreenState extends State<PathDetailsScreen> {
                   color: AppColors.primary,
                   onPressed: () {
                     // مشاركة المسار
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text('ميزة المشاركة قريباً...'),
                         duration: Duration(seconds: 2),
                       ),
                     );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                   },
                 ),
               ),
@@ -482,12 +507,30 @@ class _PathDetailsScreenState extends State<PathDetailsScreen> {
                   _buildRatingSection(),
                   const SizedBox(height: 32),
 
+<<<<<<< HEAD
                   // زر بدء الرحلة المحدث
+=======
+<<<<<<< HEAD
+                  // زر بدء الرحلة المحدث
+=======
+                  // زر بدء الرحلة
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                   Container(
                     width: double.infinity,
                     margin: const EdgeInsets.only(bottom: 16),
                     child: ElevatedButton.icon(
+<<<<<<< HEAD
                       onPressed: _startJourney,
+=======
+<<<<<<< HEAD
+                      onPressed: _startJourney,
+=======
+                      onPressed: () {
+                        // بدء الرحلة
+                      },
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                       icon: const Icon(PhosphorIcons.map_trifold),
                       label: const Text(
                         'ابدأ الرحلة',
@@ -503,8 +546,16 @@ class _PathDetailsScreenState extends State<PathDetailsScreen> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
+<<<<<<< HEAD
                         elevation: 3,
                         shadowColor: AppColors.primary.withOpacity(0.3),
+=======
+<<<<<<< HEAD
+                        elevation: 3,
+                        shadowColor: AppColors.primary.withOpacity(0.3),
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                       ),
                     ),
                   ),
@@ -655,7 +706,14 @@ class _PathDetailsScreenState extends State<PathDetailsScreen> {
           child: TextButton.icon(
             onPressed: () {
               // فتح الخريطة بشكل كامل
+<<<<<<< HEAD
               context.go('/map');
+=======
+<<<<<<< HEAD
+              context.go('/map');
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
             },
             icon: const Icon(PhosphorIcons.map_trifold),
             label: const Text('عرض الخريطة بشكل كامل'),
@@ -766,12 +824,21 @@ class _PathDetailsScreenState extends State<PathDetailsScreen> {
             TextButton.icon(
               onPressed: () {
                 // عرض جميع التقييمات
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('ميزة التقييمات قريباً...'),
                     duration: Duration(seconds: 2),
                   ),
                 );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
               },
               icon: const Icon(PhosphorIcons.chat_circle_text),
               label: const Text('عرض الكل'),
@@ -833,12 +900,21 @@ class _PathDetailsScreenState extends State<PathDetailsScreen> {
             ElevatedButton.icon(
               onPressed: () {
                 // إضافة تقييم
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('ميزة إضافة التقييم قريباً...'),
                     duration: Duration(seconds: 2),
                   ),
                 );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
               },
               icon: const Icon(PhosphorIcons.pencil_simple),
               label: const Text('أضف تقييمك'),
@@ -1002,4 +1078,12 @@ class _InfoCard extends StatelessWidget {
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10

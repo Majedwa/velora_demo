@@ -2,14 +2,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:provider/provider.dart';
+<<<<<<< HEAD
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 import 'dart:async';
 
 import '../../../core/constants/app_colors.dart';
 import '../../../data/models/path_model.dart';
 import '../../providers/journey_provider.dart';
 import '../../widgets/common/custom_app_bar.dart';
+<<<<<<< HEAD
 import 'widgets/journey_completion_dialog.dart';
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
 class JourneyTrackingScreen extends StatefulWidget {
   final PathModel path;
@@ -24,19 +30,28 @@ class JourneyTrackingScreen extends StatefulWidget {
 }
 
 class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
+<<<<<<< HEAD
   GoogleMapController? _mapController;
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
   bool _isJourneyStarted = false;
   bool _isJourneyPaused = false;
   Timer? _timer;
   Duration _elapsedTime = Duration.zero;
+<<<<<<< HEAD
   
   Set<Marker> _markers = {};
   Set<Polyline> _polylines = {};
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
   @override
   void initState() {
     super.initState();
+<<<<<<< HEAD
     _setupMapMarkersAndPath();
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
     _startLocationTracking();
   }
 
@@ -46,6 +61,7 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
     super.dispose();
   }
 
+<<<<<<< HEAD
   void _setupMapMarkersAndPath() {
     Set<Marker> markers = {};
     Set<Polyline> polylines = {};
@@ -105,6 +121,8 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
     });
   }
 
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
   void _startLocationTracking() {
     final journeyProvider = Provider.of<JourneyProvider>(context, listen: false);
     journeyProvider.startJourney(widget.path);
@@ -126,6 +144,7 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
 
     final journeyProvider = Provider.of<JourneyProvider>(context, listen: false);
     journeyProvider.resumeJourney();
+<<<<<<< HEAD
 
     // تحريك الكاميرا إلى نقطة البداية
     if (_mapController != null && widget.path.coordinates.isNotEmpty) {
@@ -139,6 +158,8 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
         ),
       );
     }
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
   }
 
   void _pauseJourney() {
@@ -167,6 +188,7 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
     showDialog(
       context: context,
       barrierDismissible: false,
+<<<<<<< HEAD
       builder: (context) => JourneyCompletionDialog(
         path: widget.path,
         elapsedTime: _elapsedTime,
@@ -174,6 +196,76 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
           Navigator.of(context).pop(); // إغلاق الحوار
           Navigator.of(context).pop(); // العودة للصفحة السابقة
         },
+=======
+      builder: (context) => AlertDialog(
+        title: Row(
+          children: [
+            Icon(
+              PhosphorIcons.trophy_fill,
+              color: Colors.amber,
+              size: 28,
+            ),
+            const SizedBox(width: 8),
+            const Text('تهانينا!'),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('لقد أكملت الرحلة بنجاح!'),
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: AppColors.primary.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text('الوقت المستغرق:'),
+                      Text(
+                        _formatDuration(_elapsedTime),
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text('المسافة:'),
+                      Text(
+                        '${widget.path.length} كم',
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop(); // إغلاق الحوار
+              Navigator.of(context).pop(); // العودة للصفحة السابقة
+            },
+            child: const Text('إنهاء'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).pop();
+              // يمكن إضافة مشاركة الإنجاز هنا
+            },
+            child: const Text('مشاركة'),
+          ),
+        ],
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
       ),
     );
   }
@@ -206,11 +298,16 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
         builder: (context, journeyProvider, child) {
           return Column(
             children: [
+<<<<<<< HEAD
               // معلومات الرحلة العلوية
+=======
+              // معلومات الرحلة
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
               Container(
                 padding: const EdgeInsets.all(16),
                 margin: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
+<<<<<<< HEAD
                   gradient: LinearGradient(
                     colors: [
                       AppColors.primary.withOpacity(0.1),
@@ -228,11 +325,27 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
                 child: Column(
                   children: [
                     // الوقت المستغرق مع تصميم محسن
+=======
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 10,
+                      offset: const Offset(0, 2),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    // الوقت المستغرق
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: AppColors.primary,
                         shape: BoxShape.circle,
+<<<<<<< HEAD
                         boxShadow: [
                           BoxShadow(
                             color: AppColors.primary.withOpacity(0.3),
@@ -240,11 +353,14 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
                             offset: const Offset(0, 5),
                           ),
                         ],
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                       ),
                       child: Text(
                         _formatDuration(_elapsedTime),
                         style: const TextStyle(
                           color: Colors.white,
+<<<<<<< HEAD
                           fontSize: 28,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.2,
@@ -252,6 +368,14 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
                       ),
                     ),
                     const SizedBox(height: 20),
+=======
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     
                     // إحصائيات الرحلة
                     Row(
@@ -261,12 +385,16 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
                           icon: PhosphorIcons.ruler,
                           label: 'المسافة',
                           value: '${journeyProvider.distanceTraveled.toStringAsFixed(1)} كم',
+<<<<<<< HEAD
                           color: AppColors.tertiary,
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                         ),
                         _StatItem(
                           icon: PhosphorIcons.gauge,
                           label: 'السرعة',
                           value: '${journeyProvider.currentSpeed.toStringAsFixed(1)} كم/س',
+<<<<<<< HEAD
                           color: AppColors.secondary,
                         ),
                         _StatItem(
@@ -309,11 +437,25 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
+=======
+                        ),
+                        _StatItem(
+                          icon: PhosphorIcons.map_pin,
+                          label: 'النقاط',
+                          value: '${journeyProvider.visitedCheckpoints}/${widget.path.coordinates.length}',
+                        ),
+                      ],
+                    ),
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                   ],
                 ),
               ),
 
+<<<<<<< HEAD
               // الخريطة مع التحسينات
+=======
+              // الخريطة
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
               Expanded(
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -329,6 +471,7 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(16),
+<<<<<<< HEAD
                     child: GoogleMap(
                       onMapCreated: (controller) {
                         _mapController = controller;
@@ -353,11 +496,26 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
                       scrollGesturesEnabled: true,
                       tiltGesturesEnabled: false,
                       zoomGesturesEnabled: true,
+=======
+                    child: Container(
+                      color: Colors.grey[200],
+                      child: const Center(
+                        child: Text(
+                          'خريطة تتبع الرحلة\n(سيتم دمجها مع Google Maps)',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                     ),
                   ),
                 ),
               ),
 
+<<<<<<< HEAD
               // أزرار التحكم المحسنة
               Container(
                 padding: const EdgeInsets.all(16),
@@ -510,6 +668,67 @@ class _JourneyTrackingScreenState extends State<JourneyTrackingScreen> {
                       ],
                     ],
                   ),
+=======
+              // أزرار التحكم
+              Container(
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  children: [
+                    if (!_isJourneyStarted) ...[
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          onPressed: _startJourney,
+                          icon: const Icon(PhosphorIcons.play),
+                          label: const Text('بدء الرحلة'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.primary,
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ] else ...[
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          onPressed: _pauseJourney,
+                          icon: Icon(_isJourneyPaused 
+                              ? PhosphorIcons.play 
+                              : PhosphorIcons.pause),
+                          label: Text(_isJourneyPaused ? 'استئناف' : 'إيقاف مؤقت'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: _isJourneyPaused 
+                                ? AppColors.primary 
+                                : AppColors.warning,
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          onPressed: _stopJourney,
+                          icon: const Icon(PhosphorIcons.stop),
+                          label: const Text('إنهاء الرحلة'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.error,
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ],
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
                 ),
               ),
             ],
@@ -524,19 +743,26 @@ class _StatItem extends StatelessWidget {
   final IconData icon;
   final String label;
   final String value;
+<<<<<<< HEAD
   final Color color;
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
   const _StatItem({
     required this.icon,
     required this.label,
     required this.value,
+<<<<<<< HEAD
     required this.color,
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+<<<<<<< HEAD
         Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
@@ -548,6 +774,12 @@ class _StatItem extends StatelessWidget {
             color: color,
             size: 24,
           ),
+=======
+        Icon(
+          icon,
+          color: AppColors.primary,
+          size: 24,
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
         ),
         const SizedBox(height: 8),
         Text(

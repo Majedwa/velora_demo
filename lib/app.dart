@@ -16,7 +16,14 @@ class VeloraApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer2<LanguageProvider, SettingsProvider>(
       builder: (context, languageProvider, settingsProvider, child) {
+<<<<<<< HEAD
         // إعادة بناء التطبيق عند تغيير اللغة
+=======
+<<<<<<< HEAD
+        // إعادة بناء التطبيق عند تغيير اللغة
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
         return MaterialApp.router(
           title: 'Velora',
           debugShowCheckedModeBanner: false,
@@ -28,7 +35,15 @@ class VeloraApp extends StatelessWidget {
               ? ThemeMode.dark 
               : ThemeMode.light,
           
+<<<<<<< HEAD
           // Localization - تحسين دعم اللغات
+=======
+<<<<<<< HEAD
+          // Localization - تحسين دعم اللغات
+=======
+          // Localization
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
           locale: Locale(languageProvider.currentLanguage),
           supportedLocales: const [
             Locale('en', 'US'),
@@ -41,6 +56,10 @@ class VeloraApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
           // تحديد fallback locale في حالة عدم دعم اللغة
           localeResolutionCallback: (locale, supportedLocales) {
             // إذا كانت اللغة المطلوبة مدعومة، استخدمها
@@ -55,6 +74,11 @@ class VeloraApp extends StatelessWidget {
             return const Locale('ar', 'PS');
           },
           
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
           // Routing
           routerConfig: AppRouter.router,
           

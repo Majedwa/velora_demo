@@ -653,6 +653,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+<<<<<<< HEAD
   share_plus:
     dependency: "direct main"
     description:
@@ -669,6 +670,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.0"
+=======
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
   shared_preferences:
     dependency: "direct main"
     description:

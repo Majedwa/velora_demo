@@ -50,10 +50,25 @@ dependencies:
   lottie: ^3.3.1
   url_launcher: ^6.3.1
   package_info_plus: ^8.3.0
+<<<<<<< HEAD
   geolocator: ^14.0.1
   google_maps_flutter: ^2.12.2
   geocoding: ^4.0.0
   share_plus: ^11.0.0
+=======
+<<<<<<< HEAD
+  geolocator: ^14.0.1
+  google_maps_flutter: ^2.12.2
+  geocoding: ^4.0.0
+=======
+<<<<<<< HEAD
+  geolocator: ^14.0.1
+  google_maps_flutter: ^2.12.2
+  geocoding: ^4.0.0
+=======
+>>>>>>> 839cef9be570b69b27bcca0554f9fec7332b4693
+>>>>>>> c5e84a9c6bdf5d95948ba5bed7e7a7efbe2ecc7c
+>>>>>>> d8716e0eeca8eb3d65ed31d130d527db75d35c10
 
 dev_dependencies:
   flutter_test:
